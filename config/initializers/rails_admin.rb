@@ -23,6 +23,7 @@ RailsAdmin.config do |config|
     end
   end
 
+
   ## == CancanCan ==
   # config.authorize_with :cancancan
 

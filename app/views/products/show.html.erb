@@ -1,0 +1,13 @@
+<h1>product show</h1>
+
+<h1> <%= @product.name %> </h1>
+<h1> <%= @product.cost %> </h1>
+<h1> <%= @product.sizes %> </h1>
+<h1> <%= @product.product_type %> </h1>
+
+
+<% @product.images.each do |image| %>
+  <%= image_tag image %>
+<% end %>
+
+

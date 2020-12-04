@@ -2,8 +2,10 @@
 
 <h1> <%= @product.name %> </h1>
 <h1> <%= @product.cost %> </h1>
-<h1> <%= @product.sizes %> </h1>
 <h1> <%= @product.product_type %> </h1>
+<% @product.sizes.each do |size| %>
+ <h1> <%= size.name %></h1>
+<% end %>
 
 
 <% @product.images.each do |image| %>

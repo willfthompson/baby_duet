@@ -19,6 +19,22 @@ puts "------------------------------"
 puts "-#{Size.count} sizes created-"
 puts "------------------------------"
 
+puts "------------------------------"
+puts "------Creating Products-------"
+puts "------------------------------"
+
+product = Product.new
+product.name = "Test Product"
+product.cost = 1000
+product.product_type = "Test Type"
+product.sizes << Size.all
+product.save!
+
+puts "------------------------------"
+puts "-#{Product.count} products created-"
+puts "------------------------------"
+
+
 
 puts "------------------------------"
 puts "--------Creating Users--------"
@@ -34,3 +50,5 @@ user.save!
 puts "------------------------------"
 puts "-#{User.count} users created-"
 puts "------------------------------"
+
+

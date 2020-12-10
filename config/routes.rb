@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :products, only: [:index, :show]
   post "/products/add/:id", to: "products#add_to_basket", as: "add_to_basket"
-  post "/products/remove/:id", to: "products#remove_from_basket", as: "remove_from_basket"
-
-  resources :baskets, only: :show
-
-
+  get "/basket/decrement/:id", to: "baskets#decrement_basket", as: "decrement_basket"
+  get "/basket/increment/:id", to: "baskets#increment_basket", as: "increment_basket"
+  get "/basket", to: "baskets#show_basket", as: "basket"
 end

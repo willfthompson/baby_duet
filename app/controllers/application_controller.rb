@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def create_basket
     if !session[:basket]
-      session[:basket] = []
+      session[:basket] = Hash.new
     end
   end
 end

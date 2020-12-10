@@ -3,9 +3,7 @@
 <h1> <%= @product.name %> </h1>
 <h1> <%= @product.cost %> </h1>
 <h1> <%= @product.product_type %> </h1>
-<% @product.sizes.each do |size| %>
-  <h2> <%= size.name %></h2>
-<% end %>
+
 
 
 <% @product.images.each do |image| %>
@@ -13,7 +11,7 @@
 <% end %>
 
 <%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
-  <%= collection_select(:product, :size_ids, @product.sizes.all, :id, :name, prompt: true) %>
+  <%= collection_select(:product, :products_size_ids, @product.sizes, :id, :name, prompt: true) %>
   <%= form.submit 'Add to basket' %>
 <% end %>
 

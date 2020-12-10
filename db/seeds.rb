@@ -14,6 +14,7 @@ puts "------------------------------"
 Size.create(name: "0-3 Months")
 Size.create(name: "3-6 Months")
 Size.create(name: "6-12 Months")
+Size.create(name: "One Size")
 
 puts "------------------------------"
 puts "-#{Size.count} sizes created-"
@@ -24,10 +25,19 @@ puts "------Creating Products-------"
 puts "------------------------------"
 
 product = Product.new
-product.name = "Test Product"
+product.name = "Test Product 1"
 product.cost = 1000
-product.product_type = "Test Type"
-product.sizes << Size.all
+product.product_type = "Babygrow"
+product.sizes << Size.find(1)
+product.sizes << Size.find(2)
+product.sizes << Size.find(3)
+product.save!
+
+product = Product.new
+product.name = "Test Product 2"
+product.cost = 1000
+product.product_type = "Bib"
+product.sizes << Size.find(4)
 product.save!
 
 puts "------------------------------"

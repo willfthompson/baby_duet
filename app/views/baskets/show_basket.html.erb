@@ -1,0 +1,17 @@
+<h1>BASKET PAGE</h1>
+<%= link_to "home", root_path %>
+
+<% @basket_items.each do |item| %>
+<h1>item</h1>
+<%= item[:product].name %>
+<h1>price</h1>
+<%= item[:product].cost %>
+<h1>size</h1>
+<%= item[:size].name %>
+<h1>Quantity</h1>
+<%= item[:quantity] %>
+<h1> item cost </h1>
+<%= item[:product].cost * item[:quantity] %>
+<%= link_to "minus", decrement_basket_path(item[:products_size].id) %>
+<%= link_to "plus", increment_basket_path(item[:products_size].id) %>
+<% end %>

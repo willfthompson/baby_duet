@@ -9,8 +9,11 @@ class ProductsController < ApplicationController
   end
 
   def add_to_basket
-    session[:basket] << ProductsSize.where(:product_id => params[:id], :size_id => params[:product]["size_ids"])
-    redirect_to "#"
-    flash[:notice] = "Product added to basket!"
+    productid = ProductsSize.find(params[:product]["products_size_ids"].to_i).id.to_s
+    @basket = session[:basket]
+    @basket.keys.include?(productid) ? @basket[productid] += 1 : @basket[productid] = 1
+    redirect_to "/basket"
+    # UPDATE LATER
+    flash[:notice] = "#{@basket}"
   end
 end

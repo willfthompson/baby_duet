@@ -31,7 +31,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Devise login interface
 gem 'devise'
 
-
 # Rails admin panel
 gem 'rails_admin', '~> 2.0'
 
@@ -41,6 +40,10 @@ gem 'rails_admin_actiontext'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+# For Payments
+gem 'money-rails'
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'

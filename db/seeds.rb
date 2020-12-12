@@ -26,7 +26,7 @@ puts "------------------------------"
 
 product = Product.new
 product.name = "Test Product 1"
-product.cost = 1000
+product.price_cents = 1000
 product.product_type = "Babygrow"
 product.sizes << Size.find(1)
 product.sizes << Size.find(2)
@@ -35,7 +35,7 @@ product.save!
 
 product = Product.new
 product.name = "Test Product 2"
-product.cost = 1000
+product.price_cents = 1000
 product.product_type = "Bib"
 product.sizes << Size.find(4)
 product.save!

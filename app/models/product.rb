@@ -3,4 +3,5 @@ class Product < ApplicationRecord
   has_many_attached :images
   has_many :products_sizes
   has_many :sizes, through: :products_sizes
+  monetize :price_cents
 end

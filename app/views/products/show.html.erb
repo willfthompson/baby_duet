@@ -7,11 +7,13 @@
 
 
 <% @product.images.each do |image| %>
-  <%= image_tag image %>
+<%= image_tag image %>
 <% end %>
 
-<%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
-  <%= collection_select(:product, :products_size_ids, @product.sizes, :id, :name, prompt: true) %>
-  <%= form.submit 'Add to basket' %>
-<% end %>
+<div class="size-selector">
+  <%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
+  <div><%= collection_select(:product, :products_size_ids, @product.sizes, :id, :name, prompt: true) %></div>
+  <div><%= form.submit 'Add to basket', class: :form_button %></div>
+  <% end %>
+</div>
 

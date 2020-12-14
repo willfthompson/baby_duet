@@ -1,5 +1,7 @@
 #caro{
-
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .caro-item img{
@@ -15,16 +17,15 @@
 }
 
 .caro-inner{
-  width: 400px;
+  width: 340px;
   height: 300px;
   border: 1px solid red;
 }
 
 // Desktop
 @media (min-width: 768px) {
-
   .caro-inner{
-    width: 600px;
+    width: 560px;
     height: 450px;
   }
 }

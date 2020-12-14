@@ -29,27 +29,15 @@ require("@rails/actiontext")
 import "bootstrap";
 
 // Internal imports, e.g:
+import { initCaro } from '../plugins/init_caro';
+
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  const next = document.querySelector("#caro-next-but");
-  const prev = document.querySelector("#caro-prev-but");
-  const caro = document.querySelectorAll(".caro-item")
-  let i = 0
 
 
-  next.addEventListener("click", (e) => {
-    caro[i].classList.remove("active");
-    i < (caro.length -1) ? (i += 1) : (i = 0);
-    caro[i].classList.add("active");
-  });
-
-  prev.addEventListener("click", (e) => {
-    caro[i].classList.remove("active");
-    i > (0) ? (i -= 1) : (i = (caro.length -1));
-    caro[i].classList.add("active");
-  });
+  initCaro();
 });
 

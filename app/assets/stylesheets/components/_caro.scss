@@ -4,22 +4,77 @@
   justify-content: center;
 }
 
-.caro-item img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.caro-inner{
+  width: 340px;
+  height: 300px;
+  position: relative;
 }
 
 .caro-item{
+  position: absolute;
+  opacity: 0;
+  top: 0;
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
-.caro-inner{
-  width: 340px;
-  height: 300px;
-  border: 1px solid red;
+.lone-img{
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.lone-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.next{
+  transform: translateX(30%) scale(0.5);
+  transition: 0.2s ease-in-out !important;
+
+}
+
+.prev{
+  transform: translateX(-30%) scale(0.5);
+  transition: 0.2s ease-in-out !important;
+
+}
+
+.caro-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.caro-but{
+  height: 100%;
+  width: 50%;
+  background: none;
+  border: none;
+  transition: 0.2s ease-in-out;
+  z-index: 999;
+  &:focus {outline:0;}
+  &:hover {
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+#caro-prev-but{
+  position: absolute;
+  text-align: left;
+}
+
+#caro-next-but{
+  position: absolute;
+  text-align: right;
+  right: 0px;
+  top: 0px;
 }
 
 // Desktop
@@ -32,9 +87,8 @@
 
 // Carousel JS functions
 .active{
-  display: block !important;
-}
-.caro-item{
-  display: none;
+  opacity: 1 !important;
+  transform: translateX(0%) scale(1);
+  transition: 0.2s ease-in-out !important;
 }
 

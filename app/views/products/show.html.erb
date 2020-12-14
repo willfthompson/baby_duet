@@ -5,11 +5,10 @@
 <h1> <%= @product.product_type %> </h1>
 
 
-
+<% if @product.images.count > 1 %>
 <div id="caro">
-  <button id="caro-prev-but" class="caro-but">prev</button>
-
   <div class="caro-inner">
+    <button id="caro-prev-but" class="caro-but"><i class="fas fa-chevron-left"></i></button>
     <% @product.images.each_with_index do |slide, i| %>
       <% if i == 0 %>
       <div class="caro-item active">
@@ -21,11 +20,18 @@
       </div>
       <% end %>
     <% end %>
+    <button id="caro-next-but" class="caro-but"><i class="fas fa-chevron-right"></i></button>
   </div>
-  <button id="caro-next-but" class="caro-but">next</button>
 </div>
-
-
+<% elsif @product.images.count == 1%>
+<div id="caro">
+  <div class="caro-inner">
+  <div class="lone-img">
+      <%= image_tag(@product.images[0]) %>
+  </div>
+</div>
+  </div>
+<% end %>
 
 
 

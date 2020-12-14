@@ -3,9 +3,15 @@
 }
 
 .caro-item img{
-  height: 400px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.caro-item{
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .caro-inner{
@@ -13,6 +19,17 @@
   height: 300px;
   border: 1px solid red;
 }
+
+// Desktop
+@media (min-width: 768px) {
+
+  .caro-inner{
+    width: 600px;
+    height: 450px;
+  }
+}
+
+// Carousel JS functions
 .active{
   display: block !important;
 }

@@ -1,0 +1,22 @@
+#caro{
+
+}
+
+.caro-item img{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.caro-inner{
+  width: 400px;
+  height: 300px;
+  border: 1px solid red;
+}
+.active{
+  display: block !important;
+}
+.caro-item{
+  display: none;
+}
+

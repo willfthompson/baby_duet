@@ -6,9 +6,32 @@
 
 
 
-<% @product.images.each do |image| %>
-<%= image_tag image %>
-<% end %>
+<div id="caro">
+  <div class="caro-inner">
+    <% @product.images.each_with_index do |slide, i| %>
+      <% if i == 0 %>
+      <div class="caro-item active">
+        <%= image_tag(slide) %>
+      </div>
+      <% else %>
+      <div class="caro-item">
+        <%= image_tag(slide) %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+  <button id="caro-next-but" class="caro-but">next</button>
+  <button id="caro-prev-but" class="caro-but">prev</button>
+</div>
+
+
+
+
+
+
+
+
+
 
 <div class="size-selector">
   <%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
@@ -16,4 +39,5 @@
   <div><%= form.submit 'Add to basket', class: :form_button %></div>
   <% end %>
 </div>
+
 

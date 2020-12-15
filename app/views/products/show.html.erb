@@ -5,13 +5,40 @@
 <h1> <%= @product.product_type %> </h1>
 
 
-
-<% @product.images.each do |image| %>
-  <%= image_tag image %>
+<% if @product.images.count > 1 %>
+<div id="caro">
+  <div class="caro-inner">
+    <button id="caro-prev-but" class="caro-but"><i class="fas fa-chevron-left"></i></button>
+    <% @product.images.each_with_index do |slide, i| %>
+      <% if i == 0 %>
+      <div class="caro-item active">
+        <%= image_tag(slide) %>
+      </div>
+      <% else %>
+      <div class="caro-item">
+        <%= image_tag(slide) %>
+      </div>
+      <% end %>
+    <% end %>
+    <button id="caro-next-but" class="caro-but"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</div>
+<% elsif @product.images.count == 1%>
+  <div id="caro">
+    <div class="caro-inner">
+      <div class="lone-img">
+        <%= image_tag(@product.images[0]) %>
+      </div>
+    </div>
+  </div>
 <% end %>
 
-<%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
-  <%= collection_select(:product, :products_size_ids, @product.sizes, :id, :name, prompt: true) %>
-  <%= form.submit 'Add to basket' %>
-<% end %>
+
+<div class="size-selector">
+  <%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
+  <div><%= collection_select(:product, :products_size_ids, @product.sizes, :id, :name, prompt: true) %></div>
+  <div><%= form.submit 'Add to basket', class: :form_button %></div>
+  <% end %>
+</div>
+
 

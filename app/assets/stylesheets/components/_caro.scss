@@ -1,0 +1,92 @@
+#caro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.caro-inner{
+  width: 340px;
+  height: 300px;
+  position: relative;
+}
+
+.caro-item{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.lone-img{
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.lone-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.next{
+  transform: translateX(30%) scale(0.5);
+  transition: 0.2s ease-in-out !important;
+}
+
+.prev{
+  transform: translateX(-30%) scale(0.5);
+  transition: 0.2s ease-in-out !important;
+}
+
+.caro-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+.caro-but{
+  height: 100%;
+  width: 50%;
+  background: none;
+  border: none;
+  transition: 0.2s ease-in-out;
+  z-index: 999;
+  &:focus {outline:0;}
+  &:hover {
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+#caro-prev-but{
+  position: absolute;
+  text-align: left;
+}
+
+#caro-next-but{
+  position: absolute;
+  text-align: right;
+  right: 0px;
+  top: 0px;
+}
+
+// Desktop
+@media (min-width: 768px) {
+  .caro-inner{
+    width: 560px;
+    height: 450px;
+  }
+}
+
+// Carousel JS functions
+.active{
+  opacity: 1 !important;
+  transform: translateX(0%) scale(1);
+  transition: 0.2s ease-in-out !important;
+}
+

@@ -29,10 +29,15 @@ require("@rails/actiontext")
 import "bootstrap";
 
 // Internal imports, e.g:
+import { initCaro } from '../plugins/init_caro';
+import { initBurgerNShake } from '../plugins/init_burger_n_shake';
+
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initCaro();
+  initBurgerNShake();
 });
 

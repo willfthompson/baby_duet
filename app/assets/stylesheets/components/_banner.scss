@@ -1,0 +1,36 @@
+.banner{
+  height: 100vh;
+  width: 100vw;
+  background-color: $bd-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-graphic{
+  position: relative;
+}
+
+.banner-logo{
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 800px;
+}
+
+.banner-logo img{
+  width: 100%;
+}
+
+.banner-text{
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  text-align: right;
+  width: 40%;
+  h1{
+    font-family: $bosk;
+    font-style: italic;
+    font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (800 - 300)));
+    color: $bd-red;
+  }
+}

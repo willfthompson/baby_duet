@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
+  transition: 0.2s ease-in-out;
 }
 
 .bd-logo{
@@ -42,6 +43,7 @@
 }
 
 #burger{
+  transition: 0.1s ease-in-out;
   z-index: 1;
   position: relative;
   height: 100%;
@@ -65,7 +67,7 @@
   align-items: flex-end;
   transition: 0.2s ease-in-out;
   border-radius: 0px 0px 20px 20px;
-  background-color: $bd-yellow;
+  background-color: $bd-blue;
   width: 100px;
   padding-top: 30px;
   margin: 0px -16px 0px 0px
@@ -90,17 +92,27 @@
 }
 
 .shake-mini{
-  transition: 0.1s ease-in-out !important;
+  transition: 0.1s ease-in-out ;
   transform: translateY(-100%) translateX(0%) scale(1);
   a{
     opacity: 0;
+  transition: 0.1s ease-in-out;
+
   }
 }
 
 .shake-active{
-  opacity: 1 !important;
+  opacity: 1 ;
   transform: translateX(0%) scale(1);
-  transition: 0.2s ease-in-out !important;
+  transition: 0.2s ease-in-out ;
+  a{
+    transition: 0.4s ease-in-out ;
+  }
+}
+
+.rotate{
+  transform: rotate(90deg);
+  transition: 0.2s ease-in-out;
 }
 
 

@@ -45,7 +45,7 @@ puts "-#{Product.count} products created-"
 puts "------------------------------"
 
 
-
+# Seed edit
 puts "------------------------------"
 puts "--------Creating Users--------"
 puts "------------------------------"

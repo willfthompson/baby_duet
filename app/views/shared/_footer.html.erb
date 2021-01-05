@@ -1,11 +1,21 @@
 <div class="footer">
+  <h1>Follow Us!</h1>
   <%= link_to 'https://www.instagram.com/baby_duet_/' do %>
-    <i class="fab fa-instagram"></i>
+  <i class="fab fa-instagram"></i>
   <% end %>
   <%= link_to 'https://www.facebook.com/babyduet' do %>
-    <i class="fab fa-facebook-f"></i>
+  <i class="fab fa-facebook-f"></i>
   <% end %>
   <%= mail_to 'victorine@babyduet.com', subject: "Hello Baby Duet" do %>
-    <i class="far fa-envelope"></i>
+  <i class="far fa-envelope"></i>
+  <% end %>
+  <%= form_with url: "#", method: :get do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label :email, "Email" %>
+  <%= form.text_field :email %>
+  <%= form.submit "Submit" %>
+  <!-- Need Mailchimp login to setup properly -->
+  <!-- https://medium.com/swlh/how-to-build-a-mailing-list-with-ruby-on-rails-and-mailchimp-ae9bb45b041f -->
   <% end %>
 </div>

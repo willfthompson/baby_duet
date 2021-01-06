@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // background-color: $bd-yellow;
+  height: 400px;
+}
+
+.footer-form{
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer-links{
+  h1{
+    font-family: $bosk;
+    color: $bd-red;
+  }
+}

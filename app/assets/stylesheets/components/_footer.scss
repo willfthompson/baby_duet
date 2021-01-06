@@ -2,20 +2,39 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  // background-color: $bd-yellow;
   height: 400px;
 }
 
 .footer-form{
+  width: 40%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   form{
     display: flex;
     flex-direction: column;
   }
 }
 
-.footer-links{
+.footer-links-header{
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   h1{
     font-family: $bosk;
     color: $bd-red;
+  }
+}
+
+.footer-links{
+
+  a{
+    text-decoration: none;
+    color: $bd-red;
+    font-size: 48px;
   }
 }

@@ -24,13 +24,13 @@
 .banner-text{
   position: absolute;
   top: 95%;
-  left: 50%;
+  left: 45%;
   text-align: right;
-  width: 40%;
+  width: 50%;
   h1{
     font-family: $bosk;
     font-style: italic;
-    font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (800 - 300)));
+    font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (800 - 300)));
     color: $bd-red;
   }
 }

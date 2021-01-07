@@ -1,6 +1,14 @@
-<h1>Products Index</h1>
-<% @products.each do |product| %>
-  <%= link_to product do %>
-    <h1><%= product.name %></h1>
-  <% end %>
-<% end %>
+<div class="row product-index">
+  <% @products.each do |product| %>
+  <div class="index-card col-12 col-lg-6">
+      <%= link_to product do %>
+      <div class="card-name">
+        <%= product.name %>
+      </div>
+      <div class="card-image">
+        <img src="<%= url_for(product.images[0]) %>" alt="">
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+</div>

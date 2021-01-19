@@ -19,6 +19,36 @@
   font-weight: bold;
 }
 
+.intro-story{
+  position: absolute;
+  text-align: center;
+   bottom: 10%;
+  right: 10%;
+  font-family: $bosk;
+  a{
+    text-decoration: none;
+  }
+}
 
+.intro-story:hover{
+    .intro-story-lg{
+      font-size: 46px;
+    transition: 0.2s ease-in-out;
 
+    }
+
+}
+
+.intro-story-sm{
+  color: white;
+  margin-top: -26px;
+  transition: 0.2s ease-in-out;
+
+}
+
+.intro-story-lg{
+  transition: 0.2s ease-in-out;
+  color: $bd-red;
+  font-size: 36px;
+}
 

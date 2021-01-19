@@ -1,12 +1,24 @@
 .intro{
+  background-color: $bd-blue;
+  text-align: center;
+  position: relative;
   img{
-    width: 100vw;
-    position: relative;
-    top: -4vh;
+    width: 100%;
   }
 }
 
 .intro-text{
-  position: relative;
-  top: 1vh;
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+  font-size: 4vw;
+  font-family: $bosk;
+  font-weight: bold;
 }
+
+
+
+

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "/basket/decrement/:id", to: "baskets#decrement_basket", as: "decrement_basket"
   get "/basket/increment/:id", to: "baskets#increment_basket", as: "increment_basket"
   get "/basket", to: "baskets#show_basket", as: "basket"
+  get "/about", to: "pages#about"
 end

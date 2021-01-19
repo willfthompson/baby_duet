@@ -8,6 +8,9 @@
   justify-content: space-between;
   position: sticky;
   transition: 0.2s ease-in-out;
+  position: fixed;
+  z-index: 100;
+  top: 0;
 }
 
 .bd-logo{

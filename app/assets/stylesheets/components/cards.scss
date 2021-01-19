@@ -1,0 +1,39 @@
+
+
+.product-index{
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid green;
+}
+
+.index-card{
+  background-image: "bd_card_yellow";
+
+  height: 300px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.card-name{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-image{
+  height: 200px;
+  width: 280px;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

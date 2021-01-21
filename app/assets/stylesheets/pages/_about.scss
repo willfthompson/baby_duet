@@ -1,0 +1,38 @@
+//ABOUT PAGE STYLING
+
+.about-banner{
+  height: 100vh;
+  width: 100vw;
+  background-color: $bd-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1{
+    width: 80vw;
+    font-family: $bosk;
+    color: white;
+    font-size: 16vw;
+  }
+  h3{
+    width: 80vw;
+    font-family: $bosk;
+    color: $bd-red;
+    font-size: 6vw;
+  }
+}
+
+.about-text{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  text-align: justify;
+}
+
+
+.quote{
+  color: $bd-red;
+}

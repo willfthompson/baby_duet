@@ -5,7 +5,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  h1{
+    font-family: $bosk;
+    color: white;
+  }
+  h3{
+    font-family: $bosk;
+    color: $bd-red;
+  }
 }
+
+
 
 .banner-graphic{
   position: relative;
@@ -34,3 +44,4 @@
     color: $bd-red;
   }
 }
+

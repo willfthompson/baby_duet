@@ -1,29 +1,13 @@
-.footer{
-  background-color: white;
-  display: flex;
-  justify-content: center;
-}
-
 
 
 .footer-main{
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-// Desktop
-@media (min-width: 768px) {
-  .footer-main{
-    flex-direction: row;
-  }
-}
-
-.footer-social{
   background-color: $bd-blue;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-social{
+  flex-basis: 100%;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -31,10 +15,11 @@
   justify-content: center;
   h1{
     font-family: $bosk;
-    color: $bd-red;
+    color: white;
+    font-size: 6vw;
   }
   a{
-    color: black;
+    color: white;
   }
 }
 
@@ -42,47 +27,55 @@
   display: flex;
 }
 
+.footer-logo{
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 18vw;
+  }
+}
+
 .footer-link{
   margin: 0px 20px 0px 20px;
   a{
     text-decoration: none;
-    color: $bd-red;
-    font-size: 48px;
+    color: white;
+    font-size: 6vw;
     &:hover{
-      color: $bd-blue;
+      color: $bd-red;
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 768px) {
+  .footer-social{
+  flex-basis: 50%;
+  }
+  .footer-logo{
+  flex-basis: 50%;
+    img{
+      height: 12vw;
+    }
+  }
+  .footer-link{
+    a{
+      font-size: 4vw;
+    }
+  }
+  .footer-social{
+    h1{
+      font-size: 4vw;
     }
   }
 }
 
 
-.footer-form{
-  padding: none;
-  background-color: $bd-yellow;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-   form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  img{
-    height: 100px;
-  }
-  h1{
-    font-family: $bosk;
-    color: $bd-red;
-  }
-}
-
-.form-elem{
-  margin: 4px 0px 4px 0px;
-}
-
 
 .copyright{
-  padding-top: 20px;
+  padding-top: 12px;
   text-align: center;
   color: grey;
 }

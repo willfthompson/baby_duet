@@ -1,0 +1,48 @@
+.deals-form{
+  padding: none;
+  background-color: $bd-yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+   form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  img{
+    height: 100px;
+  }
+  h1{
+    font-family: $bosk;
+    color: $bd-red;
+  }
+}
+
+.form-elem{
+  margin: 4px 0px 4px 0px;
+}
+
+// Desktop
+@media (min-width: 768px) {
+  .deals-main{
+    flex-direction: row;
+  }
+}
+
+.deals-main{
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+.deals{
+  border: 1px solid green;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}

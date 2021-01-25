@@ -1,0 +1,34 @@
+<div class="deals">
+  <div class="deals-main">
+    <div class="deals-form">
+      <%= link_to root_path do %>
+      <%= image_tag "bd_logo_red" %>
+    <% end %>
+
+
+      <h1>Never Miss Out!</h1>
+      <h3>Get exclusive deals, news and inspiration</h3>
+      <%= form_with url: "#", method: :get do |f| %>
+      <div class="form-elem">
+        <%= f.label :name, "Name" %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="form-elem">
+        <%= f.label :email, "Email" %>
+        <%= f.text_field :email %>
+      </div>
+      <div class="form-elem">
+        <%= f.submit "Submit" %>
+      </div>
+      <!-- Need Mailchimp login to setup properly -->
+      <!-- https://medium.com/swlh/how-to-build-a-mailing-list-with-ruby-on-rails-and-mailchimp-ae9bb45b041f -->
+      <% end %>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>

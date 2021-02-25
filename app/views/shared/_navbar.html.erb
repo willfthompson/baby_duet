@@ -1,25 +1,30 @@
 <div class="navbar">
   <div class="bd-logo">
     <%= link_to root_path do %>
-      <%= image_tag "bd_logo_white" %>
+      <%= image_tag "logos/bd_logo_og" %>
     <% end %>
   </div>
   <div class="nav-links">
     <%= link_to "Shop", products_path %>
+    <div class="nav-divide"></div>
     <%= link_to "MamaDuet", blogs_path %>
+    <div class="nav-divide"></div>
     <%= link_to basket_path, class: :basket do %>
       Basket <i class="fas fa-shopping-basket"></i>
     <% end %>
   </div>
   <div class="burger-menu">
     <div id="burger">
-      <%= image_tag "burger_menu_white", id: "burger-drop"%>
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+
     </div>
     <div id="shake" class="shake-mini">
       <%= link_to "Shop", products_path %>
       <%= link_to "About", "#" %>
       <%= link_to "MamaDuet", blogs_path %>
-      <%= link_to basket_path, class: :basket do %>
+      <%= link_to basket_path do %>
       Basket <i class="fas fa-shopping-basket"></i>
     <% end %>
     </div>

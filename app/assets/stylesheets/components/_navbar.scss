@@ -46,6 +46,9 @@
 // Burger and shake menu
 .burger-menu{
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .burger-line{
@@ -58,7 +61,8 @@
 }
 
 #burger{
-  height: 100%;
+  padding: auto;
+  margin: auto;
   transition: 0.1s ease-in-out;
   z-index: 1;
   position: relative;
@@ -67,9 +71,9 @@
   justify-content: center;
   align-items: center;
 
- &:hover{
-  cursor: pointer;
-}
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 #shake{
@@ -94,8 +98,8 @@
     &:hover{
       text-decoration: none;
       background-color: $brand;
+    }
   }
-}
 }
 
 .shake-load{
@@ -116,7 +120,7 @@
 }
 
 .rotate{
-
+  // height: 80% !important;
   transform: rotate(90deg);
   transition: 0.2s ease-in-out;
 }
@@ -135,8 +139,8 @@
     align-items: center;
   }
   .bd-logo{
-  height: 180px;
- }
+    height: 180px;
+  }
 
 }
 

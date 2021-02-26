@@ -1,31 +1,36 @@
 <div class="footer">
-  <div class="footer-main">
-    <div class="footer-logo">
-      <%= image_tag "bd_logo_new_red" %>
-    </div>
-    <div class="footer-social">
-      <h1>Follow BabyDuet!</h1>
-      <div class="footer-links">
-        <div class="footer-link">
-          <%= link_to 'https://www.instagram.com/baby_duet_/' do %>
-          <i class="fab fa-instagram"></i>
-          <% end %>
-        </div>
-        <div class="footer-link">
-          <%= link_to 'https://www.facebook.com/babyduet' do %>
-          <i class="fab fa-facebook-f"></i>
-          <% end %>
-        </div>
-        <div class="footer-link">
-          <%= mail_to 'victorine@babyduet.com', subject: "Hello Baby Duet" do %>
-          <i class="far fa-envelope"></i>
-          <% end %>
-        </div>
 
+  <div class="footer-logo">
+    <%= link_to root_path do %>
+      <%= image_tag "logos/bd_logo_og" %>
+    <% end %>
+  </div>
+
+
+  <div class="footer-social">
+    <h1>Contact Us</h1>
+    <div class="footer-links">
+      <div class="footer-link">
+        <%= link_to 'https://www.instagram.com/baby_duet_/' do %>
+        <p>Instagram</p>
+        <% end %>
+      </div>
+      <div class="footer-link">
+        <%= link_to 'https://www.facebook.com/babyduet' do %>
+        <p>Facebook</p>
+        <% end %>
+      </div>
+      <div class="footer-link">
+        <%= mail_to 'victorine@babyduet.com', subject: "Hello Baby Duet" do %>
+        <p>Email</p>
+        <% end %>
       </div>
     </div>
+    <div class="footer-signup">
+      <h1>Sign Up Now For 10% Off</h1>
+      SIGN UP BOX TBD
+    </div>
   </div>
-  <div class="copyright">
-    <p>Copyright © 2021 BabyDuet</p>
-  </div>
+
+
 </div>

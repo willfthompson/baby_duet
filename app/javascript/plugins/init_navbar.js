@@ -4,20 +4,15 @@ let w = window.innerWidth
 || document.body.clientWidth;
 
   const initNavbar = () => {
-    const banner = document.querySelector(".banner");
     const navbar = document.querySelector(".navbar");
-    if(banner){
-      if(document.documentElement.scrollTop < 10) {
-        navbar.style.display = "none";
+       if(document.documentElement.scrollTop <= 10) {
+        navbar.classList.remove("scrolled");
       } else {
-        navbar.style.display = "flex";
+        navbar.classList.add("scrolled");
       }
-    } else {
-      navbar.style.display = "flex";
-    }
-  };
-  initNavbar()
-  if(w >= 768){
+    };
+export { initNavbar };
 
+  initNavbar()
   window.onscroll = function() {initNavbar()};
-};
+

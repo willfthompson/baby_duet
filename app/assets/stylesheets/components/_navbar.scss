@@ -4,13 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   z-index: 100;
   top: 0;
+  transition: 0.2s ease-in-out;
+
 }
 
 .bd-logo{
-  height: 150px;
+  height: 100%;
   img{
    height: 100%;
  }
@@ -34,9 +36,17 @@
   font-size: 24px;
   font-family: $headers-font;
   &:hover{
-    text-decoration: none;
-    color: $brand;
+    transition: 0.2s ease-in-out;
+    opacity: 0.6;
+  text-decoration: none;
+
   }
+}
+
+.scrolled{
+  height: 120px !important;
+  background-color: rgba(255,255,255, 0.8);
+  transition: 0.2s ease-in-out;
 }
 
 .fa-shopping-basket{
@@ -85,19 +95,20 @@
   flex-direction: column;
   align-items: flex-end;
   padding-top: 150px;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255,255,255, 1);
   padding-left: 10%;
 
   a{
     text-align: center;
     color: $text;
-    padding: 10px;
+    padding: 15px 15px 5px 15px;
     font-size: 24px;
     font-family: $headers-font;
-    border-bottom: 1px solid $brand;
+    border-bottom: 2px solid $brand;
     &:hover{
-      text-decoration: none;
-      background-color: $brand;
+      transition: 0.2s ease-in-out;
+    opacity: 0.6;
+  text-decoration: none;
     }
   }
 }
@@ -114,7 +125,6 @@
 }
 
 .shake-active{
-  opacity: 0.8 ;
   transform: translateX(0%);
   transition: 0.2s ease-in-out ;
 }
@@ -137,9 +147,6 @@
   .nav-links{
     display: flex;
     align-items: center;
-  }
-  .bd-logo{
-    height: 180px;
   }
 
 }

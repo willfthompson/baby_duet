@@ -11,7 +11,6 @@ const initBurgerNShake = () => {
       shake.classList.remove("shake-mini");
       shake.classList.add("shake-active");
       burger.classList.add("rotate");
-
     }
   });
 };

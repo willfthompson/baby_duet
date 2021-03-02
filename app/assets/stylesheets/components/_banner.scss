@@ -11,8 +11,6 @@
 
 }
 
-
-
 .banner-graphic{
   height: 100%;
   width: 100%;
@@ -24,12 +22,4 @@
 }
 
 
-.banner-text{
-  text-align: center;
-  width: 100%;
-  h1{
-    font-size: calc(24px + (34 - 24) * ((100vw - 300px) / (800 - 300)));
-    color: $brand;
-  }
-}
 

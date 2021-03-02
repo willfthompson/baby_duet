@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.all
-  end
+    @blogs = Blog.all
+     end
 end

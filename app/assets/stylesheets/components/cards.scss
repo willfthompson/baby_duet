@@ -1,4 +1,30 @@
+.product-cards{
+  border: 1px solid green;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+}
 
+@media (min-width: 768px) {
+  .product-cards{
+
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.product-card{
+  margin: auto;
+  border:1px solid lime;
+  height: 300px;
+  width: 300px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+//legacy stylings
 
 .product-index{
   max-width: 800px;

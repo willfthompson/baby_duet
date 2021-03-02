@@ -1,1 +1,14 @@
-feature.html.erb
+<div class="edsom">
+  <h1>Ethically designed stories of motherhood</h1>
+</div>
+<div class="product-cards">
+  <% @products.last(3).each do |product| %>
+  <%= link_to product do %>
+  <div class="product-card">
+    <%= image_tag product.images.first %>
+    <%= product.name %>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+<%= link_to "Shop Everything", products_path %>

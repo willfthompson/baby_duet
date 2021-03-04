@@ -12,6 +12,7 @@
 }
 
 .banner-graphic{
+  position: relative;
   height: 100%;
   width: 100%;
   img{
@@ -22,4 +23,27 @@
 }
 
 
+
+
+.edsom{
+  position: absolute;
+  bottom: 20%;
+  right: 4%;
+  color: $text;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: $headers-font;
+  width: 320px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: c;
+}
+
+ @media (min-width: 768px) {
+  .edsom{
+    color: $brand;
+  }
+ }
 

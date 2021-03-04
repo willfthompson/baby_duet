@@ -1,4 +1,5 @@
 .product-cards{
+  padding:20px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -7,7 +8,7 @@
 
 }
 
-@media (min-width: 900px){
+@media (min-width: 966px){
   .product-cards{
     justify-content: space-between;
   }
@@ -21,14 +22,23 @@
   text-align: center;
   position: relative;
   h6{
+    margin-top: 5px;
     text-decoration: none;
     color: $text;
+    font-size: 18px;
+    font-family: $body-font;
+    font-weight: lighter;
   }
   img{
     object-fit: cover;
     height: calc(90% + 3px);
     width: 100%;
   }
+}
+
+.wide{
+  min-width: 300px;
+  width: 47%;
 }
 
 .product-card:hover .overlay {

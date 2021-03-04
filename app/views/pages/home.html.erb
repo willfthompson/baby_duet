@@ -1,9 +1,15 @@
 <%= render "shared/banner" %>
+
+<% if @products.last(3).count == 3 %>
 <%= render "shared/feature" %>
+<% end %>
 <%= render "shared/breaker" %>
 <%= render "shared/intro" %>
 <%= render "shared/breaker" %>
+<% if !@latest_blog.nil? %>
 <%= render "shared/mdintro" %>
+<% end %>
+
 <%= render "shared/breaker" %>
 <%= render "shared/shoplinks" %>
 <%= render "shared/breaker" %>

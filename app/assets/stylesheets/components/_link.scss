@@ -1,0 +1,48 @@
+.link{
+  a{
+    text-decoration:none;
+    color: $brand;
+    font-size: 24px;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+}
+
+.right{
+  display: flex;
+
+  justify-content: flex-end;
+  padding: 20px;
+  text-align: right;
+}
+
+.center-right{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  text-align: right;
+
+}
+
+.left{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.center-left{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .center-left{
+    margin-left:20%;
+  }
+  .center-right{
+    margin-right: 20%;
+  }
+}

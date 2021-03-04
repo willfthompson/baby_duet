@@ -1,0 +1,28 @@
+.md-intro{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.md-intro-l{
+  width: 420px;
+  h1{
+    color: $brand;
+  }
+}
+
+
+.md-intro-r{
+  padding: 20px;
+  h1{
+    color: $brand;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-intro-r{
+    max-width: 50%;
+    margin-top: 100px;
+  }
+}

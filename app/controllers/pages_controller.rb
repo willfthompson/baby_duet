@@ -4,5 +4,6 @@ class PagesController < ApplicationController
   def home
     @products = Product.all
     @blogs = Blog.all
+    @latest_blog = @blogs.last
      end
 end

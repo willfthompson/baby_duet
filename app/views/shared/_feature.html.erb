@@ -1,8 +1,13 @@
 
-<div class="product-cards">
+<div class="product-cards feature">
+  <div class="product-card narrow text bd-brand">
+    <p>Just in</p>
+    <i>&#10230;</i>
+    <p>The Shop</p>
+  </div>
   <% @products.last(3).each do |product| %>
   <%= link_to product do %>
-  <div class="product-card">
+  <div class="product-card narrow">
     <%= image_tag product.images.first %>
     <div class="overlay">
       <%= product.name %>

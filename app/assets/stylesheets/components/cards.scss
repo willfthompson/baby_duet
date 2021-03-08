@@ -1,11 +1,12 @@
 .product-cards{
-  padding:20px;
-  width: 100%;
+  margin: 20px;
+  padding:10px;
+  min-height: 400px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-
+  overflow: auto;
+  border: 4px solid $brand;
 }
 
 @media (min-width: 966px){
@@ -39,6 +40,11 @@
 .wide{
   min-width: 300px;
   width: 47%;
+}
+
+.narrow{
+  min-width: 200px;
+  width: 23%
 }
 
 .product-card:hover .overlay {

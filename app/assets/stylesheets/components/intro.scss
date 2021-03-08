@@ -5,14 +5,19 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap-reverse;
+  position: relative;
 }
 
 .intro-text{
+  display: block!important;
   z-index: 9;
   min-height: 400px;
-
   text-align: right;
   p{
+    padding: 10px;
+    color: $background;
+    display: table;
+    background-color: $brand;
     align-self: flex-end;
   }
 }
@@ -26,6 +31,29 @@
     height: 100%;
     width: 100%;
   }
+}
+
+.intro-images{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+
+.sm1{
+  padding: 5px;
+  height: 100px;
+  width: 100px;
+  z-index: 91;
+
+}
+
+.sm2{
+  padding: 5px;
+  height: 100px;
+  width: 100px;
+  z-index: 90;
+  margin-top: 15px;
+  margin-left: -20px;
 }
 
 @media (min-width: 768px) {

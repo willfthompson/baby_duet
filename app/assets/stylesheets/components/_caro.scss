@@ -1,16 +1,16 @@
-#caro{
+#caro {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.caro-inner{
-  width: 340px;
-  height: 300px;
+.caro-inner {
+  width: 400px;
+  height: 400px;
   position: relative;
 }
 
-.caro-item{
+.caro-item {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -19,56 +19,57 @@
   width: 100%;
 }
 
-.lone-img{
+.lone-img {
   position: absolute;
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
-.lone-img img{
+.lone-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.next{
+.next {
   transform: translateX(30%) scale(0.5);
   transition: 0.2s ease-in-out !important;
 }
 
-.prev{
+.prev {
   transform: translateX(-30%) scale(0.5);
   transition: 0.2s ease-in-out !important;
 }
 
-.caro-item img{
+.caro-item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-
 }
 
-.caro-but{
+.caro-but {
   height: 100%;
   width: 50%;
   background: none;
   border: none;
   transition: 0.2s ease-in-out;
   z-index: 999;
-  &:focus {outline:0;}
+  &:focus {
+    outline: 0;
+  }
   &:hover {
     opacity: 0.5;
     transition: 0.2s ease-in-out;
   }
 }
 
-#caro-prev-but{
+#caro-prev-but {
   position: absolute;
   text-align: left;
 }
 
-#caro-next-but{
+#caro-next-but {
   position: absolute;
   text-align: right;
   right: 0px;
@@ -76,17 +77,10 @@
 }
 
 // Desktop
-@media (min-width: 768px) {
-  .caro-inner{
-    width: 560px;
-    height: 450px;
-  }
-}
 
 // Carousel JS functions
-.active{
+.active {
   opacity: 1 !important;
   transform: translateX(0%) scale(1);
   transition: 0.2s ease-in-out !important;
 }
-

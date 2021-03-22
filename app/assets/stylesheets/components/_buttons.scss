@@ -1,27 +1,22 @@
-
-
-
-.form_button{
+.form_button {
   border: none;
   border-radius: 10px;
-  background-color: $bd-red;
-  color: white;
+  background-color: $brand;
+  color: $background;
   margin: 2px;
   height: 48px;
   width: 208px;
   transition: 0.3s ease-in-out;
-  &:hover{
-    background-color: $bd-yellow;
+  &:hover {
+    opacity: 0.8;
     transition: 0.3s ease-in-out;
-    color: black;
   }
 }
 
-
-#product_products_size_ids{
- border: none;
- border-radius: 10px;
- margin: 2px;
- height: 48px;
- width: 208px;
+#product_products_size_ids {
+  border: none;
+  border-radius: 10px;
+  margin: 2px;
+  height: 48px;
+  width: 208px;
 }

@@ -23,13 +23,19 @@ class BasketsController < ApplicationController
     end
     redirect_to "/basket"
     # UPDATE LATER
-    flash[:notice] = "#{session[:basket]}"
+    flash[:notice] = "Removed 1x #{find_product(params[:id]).name} from basket"
   end
 
   def increment_basket
     session[:basket][params[:id]] += 1
+
     redirect_to "/basket"
-    # UPDATE LATER
-    flash[:notice] = "#{session[:basket]}"
+    flash[:notice] = "Added #{find_product(params[:id]).name} to basket"
   end
+end
+
+private
+def find_product(id)
+  item = ProductsSize.find(id)
+  return Product.find(item.product_id)
 end

@@ -1,4 +1,4 @@
-.intro{
+.intro {
   padding: 20px;
   width: 100%;
   display: flex;
@@ -8,12 +8,12 @@
   position: relative;
 }
 
-.intro-text{
-  display: block!important;
+.intro-text {
+  display: block !important;
   z-index: 9;
   min-height: 400px;
   text-align: right;
-  p{
+  p {
     padding: 10px;
     color: $background;
     display: table;
@@ -22,32 +22,30 @@
   }
 }
 
-
-.intro-image{
+.intro-image {
   height: 400px;
   width: 400px;
-  img{
+  img {
     object-fit: cover;
     height: 100%;
     width: 100%;
   }
 }
 
-.intro-images{
+.intro-images {
   position: absolute;
   bottom: 0;
   display: flex;
 }
 
-.sm1{
+.sm1 {
   padding: 5px;
   height: 100px;
   width: 100px;
   z-index: 91;
-
 }
 
-.sm2{
+.sm2 {
   padding: 5px;
   height: 100px;
   width: 100px;
@@ -57,8 +55,8 @@
 }
 
 @media (min-width: 768px) {
-  .intro-text{
+  .intro-text {
     max-width: 60%;
-  margin-right: -100px;
+    margin-right: -100px;
   }
 }

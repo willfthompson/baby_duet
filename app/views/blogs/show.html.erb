@@ -1,6 +1,17 @@
-<h1>blog show</h1>
+<div class="banner">
+  <div class="banner-graphic">
+      <%= image_tag @blog.images.first %>
+    
+  </div>
+
+</div>
 <%= @blog.title %>
-<%= @blog.content %>
+
+
+<div class="text">
+<%= @blog.mama_content %>
+</div>
+<div class="text">
 <%= @blog.quickfire_questions %>
-<%= @blog.images %>
+</div>
 <%= link_to "home", root_path %>

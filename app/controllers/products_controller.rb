@@ -15,6 +15,6 @@ class ProductsController < ApplicationController
     @basket.keys.include?(productid) ? @basket[productid] += 1 : @basket[productid] = 1
     redirect_to "/basket"
     # UPDATE LATER
-    flash[:notice] = "#{@basket}"
+        flash[:notice] = "Added to basket"
   end
 end

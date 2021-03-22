@@ -1,10 +1,18 @@
 <div class="nav-mar"></div>
 
+
+<div class="product">
+
+<div class="product-info">
 <h1> <%= @product.name %> </h1>
-<h1> <%= humanized_money_with_symbol(@product.price) %> </h1>
-<h1> <%= @product.product_type %> </h1>
+<%= render "shared/breaker" %>
 
+<%= @product.rich_text_content.body %>
+<h6><%= humanized_money_with_symbol(@product.price) %></h6>
 
+</div>
+
+<div class="product-imgs">
 <% if @product.images.count > 1 %>
 <div id="caro">
   <div class="caro-inner">
@@ -32,13 +40,18 @@
     </div>
   </div>
 <% end %>
+</div>
 
-
+</div>
+<div class="product-to-b">
 <div class="size-selector">
   <%= form_with(url: add_to_basket_path(@product), local: true) do |form| %>
   <div><%= collection_select(:product, :products_size_ids, @product.sizes, :id, :name, prompt: true) %></div>
   <div><%= form.submit 'Add to basket', class: :form_button %></div>
   <% end %>
 </div>
-
+<div class="link back-link">
+  <%= link_to "Shop Everything", products_path %>
+</div>
+</div>
 

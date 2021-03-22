@@ -1,16 +1,22 @@
-.link{
-  a{
-    text-decoration:none;
+.link {
+  a {
+    text-decoration: none;
     color: $brand;
     font-size: 24px;
 
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
   }
 }
 
-.right{
+.back-link {
+  padding-top: 120px;
+  flex-grow: 1;
+  min-width: 300px;
+  text-align: right;
+}
+.right {
   display: flex;
 
   justify-content: flex-end;
@@ -18,31 +24,30 @@
   text-align: right;
 }
 
-.center-right{
+.center-right {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
   text-align: right;
-
 }
 
-.left{
+.left {
   display: flex;
   justify-content: flex-start;
   padding: 20px;
 }
 
-.center-left{
+.center-left {
   display: flex;
   justify-content: flex-start;
   padding: 20px;
 }
 
 @media (min-width: 768px) {
-  .center-left{
-    margin-left:20%;
+  .center-left {
+    margin-left: 20%;
   }
-  .center-right{
+  .center-right {
     margin-right: 20%;
   }
 }

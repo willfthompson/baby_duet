@@ -1,17 +1,70 @@
-<h1>BASKET PAGE</h1>
-<%= link_to "home", root_path %>
+<div class="nav-mar"></div>
+<% total = 0 %>
 
+
+<% if @basket_items.size <= 0 %>
+    <div class="link left">
+         <%= link_to "Sorry, your basket is empty", root_path  %>
+    </div>
+    <div class="link right">
+        <%= link_to "Add something to it?", products_path %>
+    </div>
+    <div class="link right">
+        <%= link_to "Read something inspiring?", blogs_path %>
+    </div>
+<% else %>
+
+<div class="link left">
+         <%= link_to "Your Basket", root_path  %>
+    </div>
+<div class="basket-cont">
 <% @basket_items.each do |item| %>
-<h1>item</h1>
-<%= item[:product].name %>
-<h1>price</h1>
-<%= humanized_money_with_symbol(item[:product].price) %>
-<h1>size</h1>
-<%= item[:size].name %>
-<h1>Quantity</h1>
-<%= item[:quantity] %>
-<h1> item cost </h1>
-<%= humanized_money_with_symbol(item[:product].price * item[:quantity]) %>
-<%= link_to "minus", decrement_basket_path(item[:products_size].id) %>
-<%= link_to "plus", increment_basket_path(item[:products_size].id) %>
+<div class="basket-contents">
+    <div class="basket-img">
+        <%= image_tag item[:product].images.first %>
+    </div>
+    <div class="basket-elem">
+        <p class="basket-head">Item</p>
+        <p><%= item[:product].name %></p>
+    </div>
+    <div class="basket-elem">
+        <p class="basket-head">Cost</p>
+        <p><%= humanized_money_with_symbol(item[:product].price) %></p>
+   </div>
+    <div class="basket-elem"> 
+        <p class="basket-head">Size</p>
+        <p><%= item[:size].name %></p>
+    </div>
+    <div class="basket-elem">
+        <p class="basket-head">Quantity</p>
+        <p><%= item[:quantity] %></p>
+    </div>
+    <div class="basket-elem">
+        <p class="basket-head">Sum</p>
+        <p><%= humanized_money_with_symbol(item[:product].price * item[:quantity]) %></p>
+    </div>
+    <div class="basket-elem flat">
+    <%= link_to increment_basket_path(item[:products_size].id) do%>
+        <p><i class="far fa-plus-square"></i></p>
+        <% end %>
+        <%= link_to decrement_basket_path(item[:products_size].id) do%>
+        <p><i class="far fa-minus-square"></i></p>
+        <% end %>       
+</div>
+</div>
+
+<% total += item[:product].price_cents * item[:quantity] %>
+<% end %>
+</div>
+
+<div class=basket-checkout>
+<div class=form_button> 
+Checkout Now – <%= humanized_money_with_symbol(total/100) %>
+</div>
+</div>
+
+
+<div class="link right">
+        <%= link_to "Back to the shop", products_path %>
+    </div>
 <% end %>

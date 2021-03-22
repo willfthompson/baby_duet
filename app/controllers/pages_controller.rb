@@ -2,5 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-  end
+    @products = Product.all
+    @blogs = Blog.all
+    @latest_blog = @blogs.last
+     end
 end

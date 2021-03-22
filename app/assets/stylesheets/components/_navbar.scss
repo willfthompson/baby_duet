@@ -1,5 +1,6 @@
 .navbar{
   width: 100%;
+  max-width: 1140px;
   height: 150px;
   display: flex;
   align-items: center;
@@ -8,7 +9,6 @@
   z-index: 100;
   top: 0;
   transition: 0.2s ease-in-out;
-
 }
 
 .bd-logo{
@@ -38,14 +38,16 @@
   &:hover{
     transition: 0.2s ease-in-out;
     opacity: 0.6;
-  text-decoration: none;
+    text-decoration: none;
 
   }
 }
 
 .scrolled{
   height: 120px !important;
-  background-color: rgba(255,255,255, 0.8);
+  background: rgba( 255, 255, 255, 0.50 );
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
   transition: 0.2s ease-in-out;
 }
 
@@ -107,8 +109,8 @@
     border-bottom: 2px solid $brand;
     &:hover{
       transition: 0.2s ease-in-out;
-    opacity: 0.6;
-  text-decoration: none;
+      opacity: 0.6;
+      text-decoration: none;
     }
   }
 }
@@ -130,7 +132,6 @@
 }
 
 .rotate{
-  // height: 80% !important;
   transform: rotate(90deg);
   transition: 0.2s ease-in-out;
 }

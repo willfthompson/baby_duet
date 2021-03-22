@@ -1,16 +1,24 @@
 <div class="intro">
-  <%= image_tag "bd_intro" %>
-  <div class="intro-text">
-    "Hi, I’m Victorine, the founder of Baby Duet™, mother of two, and the excited owner of this shop"
+  <div class="intro-text text ">
+    <p>
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus, enim non maximus egestas, lectus diam luctus lectus, ut mattis nulla massa sit amet nibh. Quisque sem erat, maximus vel accumsan at, venenatis dictum purus. Praesent finibus turpis ac arcu elementum, et ultricies est gravida.
+      "
+    </p>
   </div>
-  <div class="intro-story">
-    <%= link_to about_path do %>
-    <div class="intro-story-lg">
-      The Story
-      </div>
-        <div class="intro-story-sm">
-          Get to know me >
-        </div>
-        <% end %>
-      </div>
+
+  <div class="intro-image">
+    <%= image_tag "victorine" %>
+  </div>
+  <%# <div class="intro-images">
+    <div class="intro-image sm1">
+      <%= image_tag "victorine" %>
+      <%# 
     </div>
+    <div class="intro-image sm2">
+      <%= image_tag "victorine" %>
+    <%# </div>
+  </div> %> 
+</div>
+<div class="link center-right">
+  <%= link_to "Find out more about Baby Duet", about_path %>
+</div>

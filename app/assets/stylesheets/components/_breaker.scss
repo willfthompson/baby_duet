@@ -1,0 +1,14 @@
+.breaker{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 10px 0px;
+}
+
+.breaker-internal{
+  border: 1px solid $brand;
+  background-color: $brand;
+  border-radius: 10px;
+  width: 96%;
+  height: 2px;
+}

@@ -1,27 +1,32 @@
-.md-intro{
+.md-intro {
   display: flex;
   justify-content: space-around;
   align-items: start;
   flex-wrap: wrap;
 }
 
-.md-intro-l{
+.md-intro-l {
   width: 420px;
-  h1{
+  h1 {
     color: $brand;
   }
 }
 
-
-.md-intro-r{
+.md-intro-r {
   padding: 20px;
-  h1{
+  a {
     color: $brand;
+    text-decoration: none;
+
+    :hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .md-intro-r{
+  .md-intro-r {
     max-width: 50%;
     margin-top: 100px;
   }

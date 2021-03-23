@@ -1,6 +1,36 @@
-<h1>blog show</h1>
-<%= @blog.title %>
-<%= @blog.content %>
+<div class="banner">
+  <div class="banner-graphic">
+      <%= image_tag @blog.images.first %>
+    
+  </div>
+
+</div>
+
+<div class="blog-title">
+MamaDuet meets... 
+<h1><%= @blog.title %></h1>
+</div>
+
+<div class="text">
+<%= @blog.mama_content %>
+</div>
+
+<div class="product-cards">
+  <% @blog.images.drop(1).each  do | image |%>
+  <div class="product-card wide">
+    <%= image_tag image %>
+  </div>
+  <% end %>
+</div>
+
+<div class="blog-title">
+Quickfire Questions
+
+</div>
+<div class="text">
 <%= @blog.quickfire_questions %>
-<%= @blog.images %>
-<%= link_to "home", root_path %>
+</div>
+
+<div class="link right">
+  <%= link_to "More Mamas" ,blogs_path %>
+</div>

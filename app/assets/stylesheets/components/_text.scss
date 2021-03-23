@@ -1,21 +1,31 @@
-.text{
+.text {
   display: flex;
   font-weight: lighter;
   font-size: 24px;
   color: $text;
-  padding: 20px;
-  a{
+  margin: 40px;
+
+  a {
     color: $brand;
   }
 }
 
-.bd-brand{
-    display: block;
-    font-family: $headers-font;
-    text-align: left;
+.text-flip {
+  background-color: $brand;
+  color: $background;
+  padding: 20px;
 }
 
-.long{
+.no-f {
+  display: block;
+}
+
+.bd-brand {
+  display: block;
+  font-family: $headers-font;
+  text-align: left;
+}
+
+.long {
   font-size: 18px;
 }
-

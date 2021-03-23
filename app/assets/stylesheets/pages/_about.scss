@@ -1,110 +1,59 @@
 //ABOUT PAGE STYLING
 
-.about-banner{
-  height: 100vh;
+.about-image {
+  font-family: $headers-font;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
-  background-color: $bd-blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  h1{
-    width: 80vw;
-    font-family: $bosk;
-    color: white;
-    font-size: 16vw;
-  }
-  h3{
-    width: 80vw;
-    font-family: $bosk;
-    color: $bd-red;
-    font-size: 6vw;
-  }
-}
 
-.about-text{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 100px auto 0px auto;
-  width: 80vw;
-  color: $bd-grey;
-}
-
-.no-mar{
-  margin: 0px auto 0px auto;
-}
-
-.about-inner-text{
-  padding: 0px 50px 0px 50px;
-  text-align: justify;
-  max-width: 500px;
-}
-
-.yell{
-  padding: 50px 0px 50px 0px;
-  background-color: $bd-yellow;
-  width: 100vw;
-  color: $bd-lgrey;
-  .quote{
-    color: $bd-red;
-  }
-}
-
-.about-image{
-  font-family: $bosk;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 570px;
-
-  img{
+  img {
     width: 150px;
-    background-color: $bd-blue;
-    border-radius: 30px;
+    background-color: $brand;
+    border-radius: 4px;
   }
 }
 
-.about-image-wide{
+.about-image-wide {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 500px;
-  img{
+  img {
     margin: 20px;
     width: 100%;
     border-radius: 30px;
-
   }
 }
 
-.about-image-yell{
+.about-image-yell {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 160px;
-  p{
-    font-family: $bosk;
-    color: $bd-red;
+  width: 100%;
+  p {
+    font-family: $headers-font;
+    color: $brand;
   }
-  img{
+  img {
     margin: 20px;
-    width: 100%;
+    width: 20%;
     border-radius: 30px;
-
   }
 }
 
-.about-image-desc{
+.about-image-desc {
   width: 150px;
   margin: 20px;
 }
 
-.quote{
-  color: $bd-blue;
+.quote {
+  color: $brand;
+}
+
+.quotew {
+  color: $background;
 }

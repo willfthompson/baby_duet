@@ -1,6 +1,6 @@
 .deals-form{
   padding: none;
-  background-color: $bd-yellow;
+  background-color: $background;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@
   }
   h1{
     font-family: $bosk;
-    color: $bd-red;
+    color: $brand;
   }
 }
 

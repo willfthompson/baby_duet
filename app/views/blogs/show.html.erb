@@ -1,20 +1,21 @@
 <div class="banner">
   <div class="banner-graphic">
       <%= image_tag @blog.images.first %>
-    
+
   </div>
 
 </div>
 
 <div class="blog-title">
-MamaDuet meets... 
+MamaDuet meets...
 <h1><%= @blog.title %></h1>
 </div>
 
-<div class="text">
+<div class="text t-w-i">
 <%= @blog.mama_content %>
 </div>
 
+<% if @blog.images.count > 1 %>
 <div class="product-cards">
   <% @blog.images.drop(1).each  do | image |%>
   <div class="product-card wide">
@@ -22,15 +23,17 @@ MamaDuet meets...
   </div>
   <% end %>
 </div>
-
+<% end %>
+<% if @blog.quickfire_questions.present? %>
 <div class="blog-title">
 Quickfire Questions
 
 </div>
+
 <div class="text">
 <%= @blog.quickfire_questions %>
 </div>
-
+<% end %>
 <div class="link right">
   <%= link_to "More Mamas" ,blogs_path %>
 </div>

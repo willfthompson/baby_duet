@@ -21,7 +21,9 @@
 <% @basket_items.each do |item| %>
 <div class="basket-contents">
     <div class="basket-img">
+      <% if item[:product].images.count >= 1 %>
         <%= image_tag item[:product].images.first %>
+        <% end %>
     </div>
     <div class="basket-elem">
         <p class="basket-head">Item</p>
@@ -31,7 +33,7 @@
         <p class="basket-head">Cost</p>
         <p><%= humanized_money_with_symbol(item[:product].price) %></p>
    </div>
-    <div class="basket-elem"> 
+    <div class="basket-elem">
         <p class="basket-head">Size</p>
         <p><%= item[:size].name %></p>
     </div>
@@ -49,7 +51,7 @@
         <% end %>
         <%= link_to decrement_basket_path(item[:products_size].id) do%>
         <p><i class="far fa-minus-square"></i></p>
-        <% end %>       
+        <% end %>
 </div>
 </div>
 
@@ -58,7 +60,7 @@
 </div>
 
 <div class=basket-checkout>
-<div class=form_button> 
+<div class=form_button>
 Checkout Now – <%= humanized_money_with_symbol(total/100) %>
 </div>
 </div>

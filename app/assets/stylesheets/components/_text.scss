@@ -29,3 +29,13 @@
 .long {
   font-size: 18px;
 }
+
+// Text with images
+.t-w-i{
+  img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    margin: 20px;
+  }
+}

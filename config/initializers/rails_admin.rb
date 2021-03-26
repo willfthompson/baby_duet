@@ -23,6 +23,9 @@ RailsAdmin.config do |config|
     end
   end
 
+  # Hide the product_sizes model from the user
+  config.excluded_models= [ProductsSize]
+
 
   ## == CancanCan ==
   # config.authorize_with :cancancan

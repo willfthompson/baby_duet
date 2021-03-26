@@ -8,7 +8,9 @@
   <% @products.last(3).each do |product| %>
   <%= link_to product do %>
   <div class="product-card narrow">
+    <% if product.images.count >= 1 %>
     <%= image_tag product.images.first %>
+    <% end %>
     <div class="overlay">
       <%= product.name %>
     </div>

@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="banner-graphic">
-      <%= image_tag "bd_traffic_pencils.jpg" %>
+    <%= image_tag "bd_traffic_pencils.jpg" %>
 
   </div>
 </div>
@@ -8,10 +8,12 @@
   <% @products.each do |product| %>
   <%= link_to product do %>
   <div class="index-card">
-  <div class="overlay-index">
+    <div class="overlay-index">
       <%= product.name %>
     </div>
-    <%= image_tag product.images.first %>
+      <% if product.images.count >= 1 %>
+        <%= image_tag product.images.first %>
+      <% end %>
     <% end %>
     <h6><%= product.name %> –  <%=humanized_money_with_symbol(product.price) %></h6>
 

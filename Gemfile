@@ -41,6 +41,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+# Cloudinary gem
+gem 'cloudinary', '~> 1.16.0'
+
 # For Payments
 gem 'money-rails'
 

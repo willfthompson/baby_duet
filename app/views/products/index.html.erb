@@ -12,8 +12,7 @@
       <%= product.name %>
     </div>
       <% if product.images.count >= 1 %>
-        
-        <%= image_tag product.images.first %>
+        <%= cl_image_tag product.images.first.key %>
       <% end %>
     <% end %>
     <h6><%= product.name %> –  <%=humanized_money_with_symbol(product.price) %></h6>

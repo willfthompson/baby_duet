@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="banner-graphic">
-      <%= image_tag @blog.images.first %>
+      <%= cl_image_tag @blog.images.first.key %>
 
   </div>
 
@@ -19,7 +19,7 @@ MamaDuet meets...
 <div class="product-cards">
   <% @blog.images.drop(1).each  do | image |%>
   <div class="product-card wide">
-    <%= image_tag image %>
+    <%= cl_image_tag image.key %>
   </div>
   <% end %>
 </div>

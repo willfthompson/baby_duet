@@ -7,7 +7,7 @@
   <div class="md-intro-l">
     <h1>Mama Duet Meets...</h1>
     <div class="intro-image">
-      <%= image_tag @latest_blog.images.first %>
+      <%= cl_image_tag @latest_blog.images.first.key %>
     </div>
     <div class="link left">
     <%= link_to "Read Mama Duet", blogs_path %>

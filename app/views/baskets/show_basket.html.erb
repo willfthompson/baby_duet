@@ -22,7 +22,7 @@
 <div class="basket-contents">
     <div class="basket-img">
       <% if item[:product].images.count >= 1 %>
-        <%= image_tag item[:product].images.first %>
+        <%= cl_image_tag item[:product].images.first.key %>
         <% end %>
     </div>
     <div class="basket-elem">

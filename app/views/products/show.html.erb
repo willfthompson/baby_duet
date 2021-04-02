@@ -18,11 +18,11 @@
     <% @product.images.each_with_index do |slide, i| %>
       <% if i == 0 %>
       <div class="caro-item active">
-        <%= image_tag(slide) %>
+        <%= cl_image_tag(slide.key) %>
       </div>
       <% else %>
       <div class="caro-item">
-        <%= image_tag(slide) %>
+        <%= cl_image_tag(slide.key) %>
       </div>
       <% end %>
     <% end %>
@@ -33,7 +33,7 @@
   <div id="caro">
     <div class="caro-inner">
       <div class="lone-img">
-        <%= image_tag(@product.images[0]) %>
+        <%= cl_image_tag(@product.images[0].key) %>
       </div>
     </div>
   </div>

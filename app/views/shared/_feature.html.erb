@@ -9,7 +9,7 @@
   <%= link_to product do %>
   <div class="product-card narrow">
     <% if product.images.count >= 1 %>
-    <%= image_tag product.images.first %>
+    <%= cl_image_tag product.images.first.key %>
     <% end %>
     <div class="overlay">
       <%= product.name %>
